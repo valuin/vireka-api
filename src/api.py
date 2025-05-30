@@ -1,10 +1,36 @@
+
 import os
+import ee
 from dotenv import load_dotenv
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from supabase import create_client, Client
+from utils.environmental_fetch import fetch_all_environmental_data, fetch_night_lights_and_daylight
+import psycopg2
+from datetime import datetime
+from utils.functions import calculate_aqi_ispu
+import pickle
+import json
 
 load_dotenv()
+
+try:
+    with open("./models/poverty_model.pkl", "rb") as f:
+        poverty_model = pickle.load(f)
+except Exception as e:
+    print("Error loading poverty model:", str(e))
+    poverty_model = None
+
+def get_db_connection():
+    load_dotenv()
+    return psycopg2.connect(
+        dbname=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT")
+    )
 
 SUPABASE_URL: str = os.getenv("SUPABASE_URL")
 SUPABASE_ANON_KEY: str = os.getenv("SUPABASE_ANON_KEY")
@@ -16,6 +42,24 @@ def get_supabase_client() -> Client:
     return create_client(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 app = FastAPI()
+
+headers = {'User-Agent': 'Mozilla/5.0'}
+
+def initialize_ee():
+    try:    
+        ee.Initialize(project='ee-kurniakharisma17')
+    except Exception as e:
+        print("Error initializing Earth Engine:", str(e))
+
+initialize_ee()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Test(BaseModel):
     id: str | None = None 
@@ -46,3 +90,261 @@ def create_item(item: Test, supabase: Client = Depends(get_supabase_client)):
         return Test(**data[1][0])
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Supabase error: {e}")
+
+
+def predict_poverty_index(province, geospatial_data):
+    if poverty_model is None:
+        return "Model not available"
+
+    if province not in geospatial_data:
+        return "Province data not available"
+
+    try:
+        data = geospatial_data[province]
+        night_lights = data.get("night_lights", 0.0)
+        daylight_duration = data.get("daylight", 0.0)
+
+        features = np.array([[night_lights, daylight_duration]])
+        predicted_poverty = poverty_model.predict(features)[0]
+
+        return round(predicted_poverty, 2)
+
+    except Exception as e:
+        print(f"Error predicting poverty index for {province}: {str(e)}")
+        return 0.0
+    
+@app.get("/get-infrastructure-detail")
+def get_infrastructure_detail():
+    try:
+        data_coords = {}
+        period = datetime.now().strftime("%Y-%m-%d")
+        geospatial_dict = fetch_night_lights_and_daylight()
+        
+        environmental_data = fetch_all_environmental_data()
+       
+        for province, datas in environmental_data.items():
+            poverty_index = predict_poverty_index(province, geospatial_dict)
+            
+
+            try:
+                ndvi = float(datas.get("ndvi", 0))
+            except (ValueError, TypeError):
+                ndvi = 0.0
+                
+            try:
+                co = float(datas.get("co", 0))
+            except (ValueError, TypeError):
+                co = 0.0
+                
+            try:
+                so2 = float(datas.get("so2", 0))
+            except (ValueError, TypeError):
+                so2 = 0.0
+                
+            try:
+                no2 = float(datas.get("no2", 0))
+            except (ValueError, TypeError):
+                no2 = 0.0
+                
+            try:
+                precipitation = float(datas.get("precipitation", 0))
+            except (ValueError, TypeError):
+                precipitation = 0.0
+                
+            try:
+                sentinel = float(datas.get("sentinel", 0))
+            except (ValueError, TypeError):
+                sentinel = 0.0
+                
+            try:
+                o3 = float(datas.get("o3", 0))
+            except (ValueError, TypeError):
+                o3 = 0.0
+                
+            try:
+                pm25 = float(datas.get("pm25", 0))
+            except (ValueError, TypeError):
+                pm25 = 0.0
+            
+            safe_poverty_index = 9.0
+            if poverty_index is not None and not isinstance(poverty_index, str):
+                try:
+                    safe_poverty_index = float(poverty_index)
+                except (ValueError, TypeError):
+                    pass  
+        
+            try:
+                aqi_values = calculate_aqi_ispu(pm25)
+            except Exception:
+                aqi_values = 0 
+ 
+ 
+            
+            data_coords[province] = {
+                "province": province,
+                "infrastructure": "Placeholder",
+                "renewable_energy": "Placeholder",
+                "poverty_index": safe_poverty_index,
+                "ndvi": ndvi,
+                "precipitation": precipitation,
+                "sentinel": sentinel,
+                "no2": no2,
+                "co": co,
+                "so2": so2,
+                "o3": o3,
+                "pm25": pm25,
+                "ai_investment_score": float(0),
+                "period": period,
+                "level": 'province',
+                "aqi": aqi_values
+            }
+
+        conn = get_db_connection()
+        cur = conn.cursor()
+
+        data_list = []
+        for province, data in data_coords.items():
+            data_list.append((
+                data["province"],
+                data["infrastructure"],
+                data["renewable_energy"],
+                data["poverty_index"],
+                data["ndvi"],
+                data["precipitation"],
+                data["sentinel"],
+                data["no2"],
+                data["co"],
+                data["so2"],
+                data["o3"],
+                data["pm25"],
+                data["ai_investment_score"],
+                data["period"],
+                data["level"],
+                data["aqi"]
+            ))
+
+        # Execute the batch insert function with the list of composite values
+        cur.execute("SELECT insert_infrastructure_data_batch(%s::infrastructure_input[])", (data_list,))
+        conn.commit()
+        
+        return {"status": "Success", "data_count": len(data_list)}
+        
+    except Exception as ex:
+        print("Error inserting data into Database:", ex)
+        return {"error": "An error occurred while processing the request: " + str(ex)}
+    
+
+@app.get("/get-infrastructure/all-province")
+def get_all_province_environmental_data(province: str = None):
+    query = "SELECT * FROM infrastructure WHERE level = 'province'"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query, (province,))    
+    rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            if key != 'period':
+                row_dict[key] = value
+        result.append(row_dict)
+
+    return result
+        
+@app.get("/get-infrastructure/province")
+def get_province_environmental_data(provinceName : str = None):
+    with open('citiesList.json', 'r') as json_file:
+        cityprovince_dict = json.load(json_file)
+    if provinceName is None:
+        return {"error": "Province name is required"}
+    provinceName = provinceName.lower()
+    list_cities = set()
+
+    for entry in cityprovince_dict:
+        if provinceName in entry:
+            list_cities = set(entry[provinceName])
+            break
+
+    formatted_cities = ', '.join(f"'{city}'" for city in list_cities)
+    
+    query = f"SELECT * FROM infrastructure WHERE province IN ({formatted_cities})"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()    
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+    
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            row_dict[key] = value
+        result.append(row_dict)
+
+
+    return result
+
+
+@app.get("/get-infrastructure/city")
+def get_city_environmental_data(provinceName: str = None):
+    query = f"SELECT * FROM infrastructure WHERE level = 'city' AND province = '{provinceName}'"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            row_dict[key] = value
+        result.append(row_dict)
+    
+    return result
+
+
+# Need to change this into kelurahan fetch all desa
+@app.get("/get-infrastructure/kelurahan")
+def get_kelurahan_environmental_data(provinceName: str = None):
+    query = f"SELECT * FROM infrastructure WHERE level = 'kelurahan' AND province = '{provinceName}'"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            row_dict[key] = value
+        result.append(row_dict)
+    
+
+    for i in range(len(result)):
+        potential_score = PotentialScoreCalculator.generate_potential_score(
+            result[i]['pm25'],
+            result[i]['aqi'],
+            result[i]['so2'],
+            result[i]['no2'],
+            result[i]['co'],
+            result[i]['o3'],
+            result[i]['ndvi'],
+            result[i]['sentinel'],
+            result[i]['poverty_index']
+        ) 
+        
+        result[i]['ai_investment_score'] = potential_score
+    
+    generateInsight = insight_greenproject(result[0])
+    
+    result[0]['details'] = generateInsight
+
+    return result

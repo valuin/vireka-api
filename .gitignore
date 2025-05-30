@@ -4,3 +4,5 @@ venv/
 .env
 ee-account-key.json
 __pycache__/
+
+indonesia_villages_border.geojson
