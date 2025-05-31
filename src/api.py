@@ -17,6 +17,7 @@ import csv
 from src.routes import router 
 
 load_dotenv()
+print("start")
 
 try:
     with open("./models/poverty_model.pkl", "rb") as f:
@@ -54,7 +55,7 @@ def initialize_ee():
     except Exception as e:
         print("Error initializing Earth Engine:", str(e))
 
-initialize_ee()
+# initialize_ee()
 
 app.add_middleware(
     CORSMiddleware,
@@ -63,6 +64,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+print("hai")
 
 class Test(BaseModel):
     id: str | None = None 
