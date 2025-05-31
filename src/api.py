@@ -71,6 +71,10 @@ class Test(BaseModel):
     text: str | None = None
     created_at: str | None = None
 
+app.include_router(
+    
+)
+
 @app.get("/")
 def read_root():
     return {"message": "Hello from FastAPI with Supabase!"}
