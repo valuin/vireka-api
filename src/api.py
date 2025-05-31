@@ -355,8 +355,8 @@ def get_city_environmental_data(provinceName: str = None):
 
 
 @app.get("/get-infrastructure/allKelurahan")
-def get_all_kelurahan_environmental_data(provinceName: str = None):
-    query = f"SELECT * FROM infrastructure WHERE level = 'kelurahan'"
+def get_all_kelurahan_environmental_data(kecamatanName: str = None):
+    query = f"SELECT * FROM infrastructure WHERE level = 'kelurahan' AND kecamatan = '{kecamatanName}'"
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute(query)
