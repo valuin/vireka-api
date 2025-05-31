@@ -3,7 +3,10 @@ from pydantic import BaseModel
 from openai import OpenAI
 import os
 from typing import List, Optional
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 router = APIRouter(prefix="/ai", tags=["AI"])
 
