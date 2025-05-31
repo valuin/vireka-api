@@ -1,4 +1,3 @@
-
 import os
 import ee
 from dotenv import load_dotenv
@@ -19,8 +18,6 @@ from src.routes import router
 
 load_dotenv()
 
-
-    
 try:
     with open("./models/poverty_model.pkl", "rb") as f:
         poverty_model = pickle.load(f)
@@ -278,7 +275,7 @@ def get_all_province_environmental_data(province: str = None):
 
     return result
         
-@app.get("/get-infrastructure/province")
+@app.get("/get-infrastructure/provinceCity")
 def get_province_environmental_data(provinceName : str = None):
     with open('citiesList.json', 'r') as json_file:
         cityprovince_dict = json.load(json_file)
@@ -292,12 +289,17 @@ def get_province_environmental_data(provinceName : str = None):
             list_cities = set(entry[provinceName])
             break
 
-    formatted_cities = ', '.join(f"'{city}'" for city in list_cities)
+    if not list_cities:
+        return {"error": f"No cities found for province: {provinceName}"}
+
+    # Create a list of parameters for the query
+    params = list(list_cities)
+    placeholders = ','.join(['%s'] * len(params))
     
-    query = f"SELECT * FROM infrastructure WHERE province IN ({formatted_cities})"
+    query = f"SELECT * FROM infrastructure WHERE province IN ({placeholders})"
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute(query)
+    cursor.execute(query, params)
     rows = cursor.fetchall()    
     columns = [desc[0] for desc in cursor.description]
     conn.close()
@@ -309,9 +311,26 @@ def get_province_environmental_data(provinceName : str = None):
             row_dict[key] = value
         result.append(row_dict)
 
-
     return result
 
+@app.get("/get-infrastructure/province")
+def get_province_environmental_data(provinceName: str = None):
+    query = f"SELECT * FROM infrastructure WHERE province = '{provinceName}'"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+    
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            row_dict[key] = value
+        result.append(row_dict)
+
+    return result
 
 @app.get("/get-infrastructure/city")
 def get_city_environmental_data(provinceName: str = None):
@@ -320,6 +339,66 @@ def get_city_environmental_data(provinceName: str = None):
     cursor = conn.cursor()
     cursor.execute(query)
     rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+    
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            row_dict[key] = value
+        result.append(row_dict)
+
+    return result
+
+
+@app.get("/get-infrastructure/allKelurahan")
+def get_all_kelurahan_environmental_data(provinceName: str = None):
+    query = f"SELECT * FROM infrastructure WHERE level = 'kelurahan'"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    conn.close()
+    
+    result = []
+    for row in rows:
+        row_dict = {}
+        for key, value in zip(columns, row):
+            row_dict[key] = value
+        result.append(row_dict)
+
+    return result
+
+@app.get("/get-infrastructure/kecamatan")
+def get_kecamatan_kelurahan_data(kecamatanName: str = None):
+    with open('kecamatanList.json', 'r') as json_file:
+        kecamatan_dict = json.load(json_file)
+    
+    if kecamatanName is None:
+        return {"error": "Kecamatan name is required"}
+    
+    kecamatanName = kecamatanName.lower()
+    list_kelurahan = set()
+
+    for entry in kecamatan_dict:
+        if kecamatanName in entry:
+            list_kelurahan = set(entry[kecamatanName])
+            break
+
+    if not list_kelurahan:
+        return {"error": f"No kelurahan found for kecamatan: {kecamatanName}"}
+
+    # Create a list of parameters for the query
+    params = list(list_kelurahan)
+    placeholders = ','.join(['%s'] * len(params))
+    
+    query = f"SELECT * FROM infrastructure WHERE province IN ({placeholders}) AND level = 'kelurahan'"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute(query, params)
+    rows = cursor.fetchall()    
     columns = [desc[0] for desc in cursor.description]
     conn.close()
     
@@ -369,3 +448,42 @@ def delete_all_infrastructure():
         return {"error": str(e)}
     finally:
         conn.close()
+
+@app.post("/save-risk-assessment")
+def save_risk_assessment(location: str, diseaseData: dict):
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        
+        # Convert diseaseData to JSON string
+        disease_json = json.dumps(diseaseData)
+        
+        # Update query to set diseases column
+        query = """
+            UPDATE infrastructure 
+            SET diseases = %s::jsonb 
+            WHERE province = %s
+        """
+        
+        cur.execute(query, (disease_json, location))
+        conn.commit()
+        
+        if cur.rowcount == 0:
+            return {"status": "Warning", "message": f"No record found for location: {location}"}
+            
+        return {
+            "status": "Success", 
+            "message": f"Successfully updated risk assessment data for {location}",
+            "affected_rows": cur.rowcount
+        }
+        
+    except Exception as ex:
+        print("Error saving risk assessment data:", ex)
+        return {"error": "An error occurred while saving the data: " + str(ex)}
+    finally:
+        if 'cur' in locals():
+            cur.close()
+        if 'conn' in locals():
+            conn.close()
+
+

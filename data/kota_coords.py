@@ -498,3 +498,80 @@ duri_kepa_coords={
   "kedoya utara": (106.7550, -6.1750),
   "kedoya selatan": (106.7550, -6.1900)
 }
+
+
+# Get All Kelurahan
+expected_output = {
+  "kelurahan": [
+      {
+        "id": 4195,
+        "province": "kebon jeruk",
+        "infrastructure": "Placeholder",
+        "renewable_energy": "Placeholder",
+        "poverty_index": 7.08,
+        "ndvi": 0.23,
+        "precipitation": 8.1,
+        "sentinel": -1.473,
+        "no2": 126.88,
+        "co": 33.397,
+        "so2": 132.154,
+        "o3": 0.117,
+        "pm25": 52.2,
+        "ai_investment_score": 0.0,
+        "period": "2025-05-31",
+        "level": "kelurahan",
+        "aqi": 96,
+        "riskLevel": "high",
+
+        # GEN AI RESPONSE
+        "diseaseData": [
+            {
+                "name": "DBD",
+                "percentage": 0.5, 
+                "riskLevel": "high",
+                "explanationWhyItsFeasible": "DBD is a disease that is caused by a virus.",
+                "prevention": "Avoid mosquito bites, use mosquito repellent, and get vaccinated against dengue fever."
+            },
+            {
+                "name": "ISPA",
+                "percentage": 0.3,
+                "riskLevel": "medium",
+                "explanation": "ISPA is a disease that is caused by a virus."
+            }
+        ]
+    }
+  ]
+}
+
+# Get Detail Kelurahan
+expected_output2 = {
+  "kelurahan": [
+    {
+        "name": "Duri Kepa",
+        "eviData": 0.5,
+        "ndviData": 0.3,
+        "nightLightData": 0.2,
+        "dayLightData": 0.1,
+        "precipitationData": 0.4,
+        "soilMoistureData": 0.3,
+        "temperatureData": 0.2,
+        "riskLevel": "high", 
+        # GEN AI RESPONSE
+        "diseaseData": [
+            {
+                "name": "DBD",
+                "percentage": 0.5, 
+                "riskLevel": "high",
+                "explanationWhyItsFeasible": "DBD is a disease that is caused by a virus.",
+                "prevention": "Avoid mosquito bites, use mosquito repellent, and get vaccinated against dengue fever."
+            },
+            {
+                "name": "ISPA",
+                "percentage": 0.3,
+                "riskLevel": "medium",
+                "explanation": "ISPA is a disease that is caused by a virus."
+            }
+        ]
+    }
+  ]
+}
