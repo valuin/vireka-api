@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime
 import json
-from .auth import get_current_user_from_token, UserResponse, get_supabase_client
+from .auth import get_supabase_client
 from supabase import Client
 
 router = APIRouter(prefix="/citizen-reports", tags=["Citizen Reports"])
@@ -35,15 +35,12 @@ class CitizenReportResponse(BaseModel):
 @router.post("/", response_model=CitizenReportResponse)
 async def create_citizen_report(
     report: CitizenReportCreate,
-    current_user: UserResponse = Depends(get_current_user_from_token),
     supabase: Client = Depends(get_supabase_client)
 ):
     """
     ## Create New Citizen Report
     
     Submit a new citizen report for environmental or health issues.
-    
-    **Authentication Required**: Bearer token
     
     **Report Types**: Environmental pollution, health symptoms, water quality, air quality, etc.
     """
@@ -53,7 +50,7 @@ async def create_citizen_report(
         "description": report.description,
         "kecamatan": report.kecamatan,
         "kelurahan": report.kelurahan,
-        "puskesmas_id": report.puskesmas_id or current_user.puskesmas_id,
+        "puskesmas_id": report.puskesmas_id,
         "report_status": "pending"
     }
     
@@ -72,30 +69,14 @@ async def get_citizen_reports(
     kecamatan: Optional[str] = Query(None, description="Filter by kecamatan"),
     limit: int = Query(50, ge=1, le=100, description="Number of reports to return"),
     offset: int = Query(0, ge=0, description="Number of reports to skip"),
-    current_user: UserResponse = Depends(get_current_user_from_token),
     supabase: Client = Depends(get_supabase_client)
 ):
     """
     ## Get Citizen Reports
     
     Retrieve citizen reports with optional filtering.
-    
-    **Authentication Required**: Bearer token
-    
-    **Access Control**:
-    - Citizens: Only see their own reports
-    - Staff/Admin: See reports for their puskesmas or all reports
     """
     query = supabase.table("citizen_reports").select("*")
-    
-    # Apply role-based filtering using whatsapp_user_id instead of user_id
-    if current_user.role == "citizen":
-        # Since there's no user_id in table, we need to filter differently
-        # This might need adjustment based on how you want to associate reports with users
-        pass
-    elif current_user.role == "staff" and current_user.puskesmas_id:
-        query = query.eq("puskesmas_id", current_user.puskesmas_id)
-    # Admin can see all reports (no additional filter)
     
     # Apply optional filters
     if status:
@@ -123,17 +104,12 @@ async def get_citizen_reports(
 @router.get("/{report_id}", response_model=CitizenReportResponse)
 async def get_citizen_report(
     report_id: str,
-    current_user: UserResponse = Depends(get_current_user_from_token),
     supabase: Client = Depends(get_supabase_client)
 ):
     """
     ## Get Single Citizen Report
     
     Retrieve a specific citizen report by ID.
-    
-    **Authentication Required**: Bearer token
-    
-    **Access Control**: Users can only access reports they have permission to view.
     """
     response = supabase.table("citizen_reports").select("*").eq("id", report_id).execute()
     
@@ -141,52 +117,24 @@ async def get_citizen_report(
         raise HTTPException(status_code=404, detail="Citizen report not found")
     
     report = response.data[0]
-    
-    # Check access permissions - adjusted since no user_id in table
-    if current_user.role == "citizen":
-        # Need to implement proper association logic here
-        pass
-    elif (current_user.role == "staff" and 
-          current_user.puskesmas_id and 
-          report["puskesmas_id"] != current_user.puskesmas_id):
-        raise HTTPException(status_code=403, detail="Access denied")
-    
     return CitizenReportResponse(**report)
 
 @router.patch("/{report_id}", response_model=CitizenReportResponse)
 async def update_citizen_report(
     report_id: str,
     update_data: CitizenReportUpdate,
-    current_user: UserResponse = Depends(get_current_user_from_token),
     supabase: Client = Depends(get_supabase_client)
 ):
     """
     ## Update Citizen Report
     
     Update report status or add LLM processing results.
-    
-    **Authentication Required**: Bearer token
-    
-    **Permissions**:
-    - Staff/Admin: Can update status and LLM output
-    - Citizens: Limited update permissions
     """
-    # Check if report exists and user has permission
+    # Check if report exists
     response = supabase.table("citizen_reports").select("*").eq("id", report_id).execute()
     
     if not response.data:
         raise HTTPException(status_code=404, detail="Citizen report not found")
-    
-    report = response.data[0]
-    
-    # Check permissions - adjusted since no user_id in table
-    if current_user.role == "citizen":
-        # Need to implement proper association logic here
-        pass
-    elif (current_user.role == "staff" and 
-          current_user.puskesmas_id and 
-          report["puskesmas_id"] != current_user.puskesmas_id):
-        raise HTTPException(status_code=403, detail="Access denied")
     
     # Prepare update data
     update_dict = {}
@@ -213,30 +161,18 @@ async def update_citizen_report(
 @router.delete("/{report_id}")
 async def delete_citizen_report(
     report_id: str,
-    current_user: UserResponse = Depends(get_current_user_from_token),
     supabase: Client = Depends(get_supabase_client)
 ):
     """
     ## Delete Citizen Report
     
-    Delete a citizen report. Only admins or report owners can delete.
-    
-    **Authentication Required**: Bearer token
-    
-    **Permissions**: Admin or report owner only
+    Delete a citizen report.
     """
     # Check if report exists
     response = supabase.table("citizen_reports").select("*").eq("id", report_id).execute()
     
     if not response.data:
         raise HTTPException(status_code=404, detail="Citizen report not found")
-    
-    report = response.data[0]
-    
-    # Check permissions - adjusted since no user_id in table
-    if current_user.role != "admin":
-        # Need to implement proper association logic here
-        pass
     
     # Delete the report
     response = supabase.table("citizen_reports").delete().eq("id", report_id).execute()
@@ -245,7 +181,6 @@ async def delete_citizen_report(
 
 @router.get("/stats/summary")
 async def get_reports_summary(
-    current_user: UserResponse = Depends(get_current_user_from_token),
     supabase: Client = Depends(get_supabase_client)
 ):
     """
@@ -253,20 +188,9 @@ async def get_reports_summary(
     
     Get summary statistics for citizen reports.
     
-    **Authentication Required**: Bearer token
-    
     **Returns**: Count by status, type, and recent activity
     """
-    # Base query with role-based filtering
-    base_query = supabase.table("citizen_reports").select("report_status, report_type, reported_at")
-    
-    if current_user.role == "citizen":
-        # Need to implement proper filtering logic here
-        pass
-    elif current_user.role == "staff" and current_user.puskesmas_id:
-        base_query = base_query.eq("puskesmas_id", current_user.puskesmas_id)
-    
-    response = base_query.execute()
+    response = supabase.table("citizen_reports").select("report_status, report_type, reported_at").execute()
     
     if not response.data:
         return {
