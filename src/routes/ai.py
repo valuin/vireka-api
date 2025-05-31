@@ -4,6 +4,7 @@ from openai import OpenAI
 import os
 from typing import List, Optional
 
+
 router = APIRouter(prefix="/ai", tags=["AI"])
 
 # Initialize OpenAI client

@@ -487,3 +487,14 @@ district_coords = {
     'manokwari selatan': (-1.7203, 133.9694),
     'pegunungan arfak': (-1.2122, 134.0098)
 }
+
+
+duri_kepa_coords={
+  "kebon jeruk": (106.7671, -6.1921),
+  "sukabumi utara": (106.7800, -6.1950),
+  "sukabumi selatan": (106.7800, -6.2100),
+  "kelapa dua": (106.7950, -6.1850),
+  "duri kepa": (106.7749, -6.1692),
+  "kedoya utara": (106.7550, -6.1750),
+  "kedoya selatan": (106.7550, -6.1900)
+}

@@ -15,6 +15,7 @@ import json
 import numpy as np
 from data.coordinates import province_coords
 import csv
+from src.routes import router 
 
 load_dotenv()
 
@@ -72,7 +73,7 @@ class Test(BaseModel):
     created_at: str | None = None
 
 app.include_router(
-    
+    router
 )
 
 @app.get("/")
