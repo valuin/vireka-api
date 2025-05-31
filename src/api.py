@@ -12,9 +12,14 @@ from datetime import datetime
 from utils.functions import calculate_aqi_ispu
 import pickle
 import json
+import numpy as np
+from data.coordinates import province_coords
+import csv
 
 load_dotenv()
 
+
+    
 try:
     with open("./models/poverty_model.pkl", "rb") as f:
         poverty_model = pickle.load(f)
@@ -92,6 +97,19 @@ def create_item(item: Test, supabase: Client = Depends(get_supabase_client)):
         raise HTTPException(status_code=500, detail=f"Supabase error: {e}")
 
 
+@app.get("/get-night-lights-and-daylight")
+def get_night_lights_and_daylight():
+    geospatial_dict = fetch_night_lights_and_daylight()
+    # write it into csv
+    with open('geospatial_dict.csv', 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['province', 'night_lights', 'daylight'])
+        for province, data in geospatial_dict.items():
+            writer.writerow([province, data['night_lights'], data['daylight']])
+    
+    return geospatial_dict
+
+
 def predict_poverty_index(province, geospatial_data):
     if poverty_model is None:
         return "Model not available"
@@ -113,18 +131,19 @@ def predict_poverty_index(province, geospatial_data):
         print(f"Error predicting poverty index for {province}: {str(e)}")
         return 0.0
     
-@app.get("/get-infrastructure-detail")
-def get_infrastructure_detail():
+@app.get("/populate-environmental-data")
+def populate_environmental_data():
     try:
         data_coords = {}
         period = datetime.now().strftime("%Y-%m-%d")
-        geospatial_dict = fetch_night_lights_and_daylight()
+        
+        with open('geospatial_dict.json', 'r') as f:
+            geospatial_dict = json.load(f)
         
         environmental_data = fetch_all_environmental_data()
-       
+        
         for province, datas in environmental_data.items():
             poverty_index = predict_poverty_index(province, geospatial_dict)
-            
 
             try:
                 ndvi = float(datas.get("ndvi", 0))
@@ -179,6 +198,7 @@ def get_infrastructure_detail():
                 aqi_values = 0 
  
  
+            isProvince = province.lower() in province_coords
             
             data_coords[province] = {
                 "province": province,
@@ -195,7 +215,7 @@ def get_infrastructure_detail():
                 "pm25": pm25,
                 "ai_investment_score": float(0),
                 "period": period,
-                "level": 'province',
+                "level": 'province' if isProvince else 'city',
                 "aqi": aqi_values
             }
 
@@ -233,7 +253,6 @@ def get_infrastructure_detail():
         print("Error inserting data into Database:", ex)
         return {"error": "An error occurred while processing the request: " + str(ex)}
     
-
 @app.get("/get-infrastructure/all-province")
 def get_all_province_environmental_data(province: str = None):
     query = "SELECT * FROM infrastructure WHERE level = 'province'"
@@ -298,14 +317,14 @@ def get_city_environmental_data(provinceName: str = None):
     rows = cursor.fetchall()
     columns = [desc[0] for desc in cursor.description]
     conn.close()
-
+    
     result = []
     for row in rows:
         row_dict = {}
         for key, value in zip(columns, row):
             row_dict[key] = value
         result.append(row_dict)
-    
+
     return result
 
 
@@ -326,25 +345,22 @@ def get_kelurahan_environmental_data(provinceName: str = None):
         for key, value in zip(columns, row):
             row_dict[key] = value
         result.append(row_dict)
-    
-
-    for i in range(len(result)):
-        potential_score = PotentialScoreCalculator.generate_potential_score(
-            result[i]['pm25'],
-            result[i]['aqi'],
-            result[i]['so2'],
-            result[i]['no2'],
-            result[i]['co'],
-            result[i]['o3'],
-            result[i]['ndvi'],
-            result[i]['sentinel'],
-            result[i]['poverty_index']
-        ) 
-        
-        result[i]['ai_investment_score'] = potential_score
-    
-    generateInsight = insight_greenproject(result[0])
-    
-    result[0]['details'] = generateInsight
 
     return result
+
+@app.delete("/delete-all-infrastructure")
+def delete_all_infrastructure():
+    query = "DELETE FROM infrastructure"
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    try:
+        cursor.execute(query)
+        conn.commit()
+        deleted_rows = cursor.rowcount
+        return {"message": f"Successfully deleted {deleted_rows} rows from infrastructure table"}
+    except Exception as e:
+        conn.rollback()
+        return {"error": str(e)}
+    finally:
+        conn.close()

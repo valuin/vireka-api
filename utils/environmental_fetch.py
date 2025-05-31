@@ -2,6 +2,8 @@ import ee
 from datetime import datetime, timedelta
 import json
 from data.coordinates import province_coords
+from data.AllCoordinates import allCoordinates
+from data.kota_coords import district_coords
 
 def fetch_province_environmental_data():
     features = []
@@ -87,13 +89,12 @@ def fetch_province_environmental_data():
     return result
 
 def fetch_district_environmental_data():
-    with open('kota_coords.json', 'r') as json_file:
-        district_coords = json.load(json_file)
+    
     features = []
 
     for district, (lat, lon) in district_coords.items():
         point = ee.Geometry.Point(lon, lat)
-        feature = ee.Feature(point, {"district": district})
+        feature = ee.Feature(point, {"province": district})
         features.append(feature)
 
     feature_collection = ee.FeatureCollection(features)
@@ -157,7 +158,7 @@ def fetch_district_environmental_data():
     result = {}
     for feature in enriched_data['features']:
         props = feature['properties']
-        result[props['district']] = {
+        result[props['province']] = {
             "ndvi": round((props.get("ndvi", 0) or 0) * 0.0001, 2),
             "precipitation": round(props.get("precipitation", 0) or 0, 1),
             "sentinel": round(props.get("sentinel", 0) or 0, 3),
@@ -181,14 +182,15 @@ def fetch_night_lights_and_daylight():
         .select("avg_rad")\
         .mean()
 
-    solar_image = ee.ImageCollection("ECMWF/ERA5_LAND/MONTHLY")\
+    solar_image = ee.ImageCollection("ECMWF/ERA5_LAND/HOURLY")\
         .filterDate(start_date, end_date)\
-        .select("surface_solar_radiation_downwards_sum")\
-        .mean()
+        .select("surface_solar_radiation_downwards")\
+        .filter(ee.Filter.calendarRange(6, 18, 'hour'))\
+        .sum()
 
     results = {}
 
-    for province, (lat, lon) in province_coords.items():
+    for province, (lat, lon) in allCoordinates.items():
         try:
             point = ee.Geometry.Point(lon, lat).buffer(5000)
             buffered_point = point.buffer(1000)
@@ -208,7 +210,7 @@ def fetch_night_lights_and_daylight():
             ).getInfo()
 
             night_lights = night_lights_result.get("avg_rad", 0.0) or 0.0
-            daylight = solar_result.get("surface_solar_radiation_downwards_sum", 0.0) or 0.0
+            daylight = solar_result.get("surface_solar_radiation_downwards", 0.0) or 0.0
 
             results[province] = {
                 "night_lights": float(night_lights),
@@ -225,12 +227,13 @@ def fetch_night_lights_and_daylight():
     return results
 
 def fetch_all_environmental_data():
-    province_data = fetch_province_environmental_data()
+    # province_data = fetch_province_environmental_data()
     district_data = fetch_district_environmental_data()
 
-    combined_data = {**province_data, **district_data}
+    # combined_data = {**province_data, **district_data}
     
     
-    unique_data = {k: combined_data[k] for k in set(combined_data.keys())}
+    # unique_data = {k: combined_data[k] for k in set(combined_data.keys())}
 
-    return unique_data
+    return district_data
+    # return unique_data

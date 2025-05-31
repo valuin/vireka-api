@@ -1,0 +1,1949 @@
+{
+  "aceh": { "night_lights": 0.3023177981765619, "daylight": 9544399595.37107 },
+  "sumatera utara": {
+    "night_lights": 0.11028380228921172,
+    "daylight": 9594708984.37049
+  },
+  "sumatera barat": {
+    "night_lights": 0.0022708223776520082,
+    "daylight": 10714222475.908363
+  },
+  "riau": { "night_lights": 9.923181316081694, "daylight": 10463745163.306622 },
+  "jambi": {
+    "night_lights": 13.12493693147809,
+    "daylight": 11630318602.212896
+  },
+  "sumatera selatan": {
+    "night_lights": 0.6023588919342747,
+    "daylight": 13208525223.25215
+  },
+  "bengkulu": {
+    "night_lights": 5.7504774809927355,
+    "daylight": 13864781096.176462
+  },
+  "lampung": {
+    "night_lights": 0.6863642193500415,
+    "daylight": 13400837885.24674
+  },
+  "bangka belitung": {
+    "night_lights": 0.29573449318253997,
+    "daylight": 13462981656.993227
+  },
+  "kepulauan riau": {
+    "night_lights": 0.178535555168272,
+    "daylight": 10979516715.580378
+  },
+  "dki jakarta": {
+    "night_lights": 49.035098670950894,
+    "daylight": 15171410103.512537
+  },
+  "jawa barat": {
+    "night_lights": 16.339830051055493,
+    "daylight": 13385094381.456202
+  },
+  "jawa tengah": {
+    "night_lights": 0.5719685354520258,
+    "daylight": 14247142623.86511
+  },
+  "di yogyakarta": {
+    "night_lights": 19.619471852579153,
+    "daylight": 15056004768.248665
+  },
+  "jawa timur": {
+    "night_lights": 32.552507266486,
+    "daylight": 15748361744.128866
+  },
+  "banten": {
+    "night_lights": 1.357872006822907,
+    "daylight": 14563769912.007353
+  },
+  "bali": { "night_lights": 0.5349774532364289, "daylight": 17085687814.32103 },
+  "nusa tenggara barat": {
+    "night_lights": 0.2898865810530211,
+    "daylight": 15817246984.764338
+  },
+  "nusa tenggara timur": {
+    "night_lights": 0.30377544143054896,
+    "daylight": 15136293428.271658
+  },
+  "kalimantan barat": {
+    "night_lights": 0.06819715202818705,
+    "daylight": 11003336661.483356
+  },
+  "kalimantan tengah": {
+    "night_lights": 0.2607390027120113,
+    "daylight": 11611544509.179686
+  },
+  "kalimantan selatan": {
+    "night_lights": 0.261298013578988,
+    "daylight": 12163123645.64528
+  },
+  "kalimantan timur": {
+    "night_lights": 0.16332923154925205,
+    "daylight": 12008778441.384212
+  },
+  "kalimantan utara": {
+    "night_lights": 0.1388422186597497,
+    "daylight": 12700773684.0
+  },
+  "sulawesi utara": {
+    "night_lights": 1.534341037903625,
+    "daylight": 14596815040.694874
+  },
+  "sulawesi tengah": { "night_lights": 0.0, "daylight": 13137494737.270933 },
+  "sulawesi selatan": {
+    "night_lights": 0.3725856927216281,
+    "daylight": 14109382534.044052
+  },
+  "sulawesi tenggara": {
+    "night_lights": 0.34830669888033344,
+    "daylight": 14769029531.545889
+  },
+  "gorontalo": {
+    "night_lights": 5.77817314875148,
+    "daylight": 14021009351.818317
+  },
+  "sulawesi barat": {
+    "night_lights": 0.22670131271825508,
+    "daylight": 12674357165.061365
+  },
+  "maluku": {
+    "night_lights": 0.25607766798579534,
+    "daylight": 12516439202.314222
+  },
+  "maluku utara": {
+    "night_lights": 1.4925593883536763,
+    "daylight": 14759703220.718952
+  },
+  "papua": { "night_lights": 0.0, "daylight": 9892433526.043686 },
+  "papua barat": {
+    "night_lights": 0.04478980401191372,
+    "daylight": 10792980406.709358
+  },
+  "papua selatan": {
+    "night_lights": 0.017916226735958437,
+    "daylight": 12514558499.483662
+  },
+  "papua tengah": {
+    "night_lights": 0.20034666869634937,
+    "daylight": 10298861577.12562
+  },
+  "papua pegunungan": {
+    "night_lights": 0.0036685495044922896,
+    "daylight": 10253195500.649326
+  },
+  "sidoarjo": {
+    "night_lights": 24.650308171396095,
+    "daylight": 15417526556.936588
+  },
+  "bantul": {
+    "night_lights": 5.330926168210951,
+    "daylight": 15172741116.046024
+  },
+  "jakarta pusat": {
+    "night_lights": 47.96725017294405,
+    "daylight": 15187339801.771881
+  },
+  "aceh selatan": {
+    "night_lights": 0.24980407694286955,
+    "daylight": 10083049765.727707
+  },
+  "aceh tenggara": {
+    "night_lights": 0.11202184576903283,
+    "daylight": 9553913581.57789
+  },
+  "aceh timur": {
+    "night_lights": 0.18910904344872612,
+    "daylight": 9714018978.270794
+  },
+  "aceh tengah": {
+    "night_lights": 0.1535296780879312,
+    "daylight": 9439681892.09965
+  },
+  "aceh barat": {
+    "night_lights": 0.2616632274335566,
+    "daylight": 10034740643.950392
+  },
+  "aceh besar": {
+    "night_lights": 1.0793743403477356,
+    "daylight": 9910719274.93141
+  },
+  "pidie": { "night_lights": 0.6331844024182369, "daylight": 9202512168.28644 },
+  "aceh utara": {
+    "night_lights": 0.45703079194086804,
+    "daylight": 9668135029.30648
+  },
+  "simeulue": {
+    "night_lights": 0.14563282219056692,
+    "daylight": 12188319518.663784
+  },
+  "aceh singkil": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "bireuen": {
+    "night_lights": 1.3128296693272767,
+    "daylight": 9625139562.01493
+  },
+  "aceh barat daya": {
+    "night_lights": 0.5401422862541871,
+    "daylight": 9438618762.222652
+  },
+  "gayo lues": {
+    "night_lights": 0.17639815385724217,
+    "daylight": 8933727599.103634
+  },
+  "aceh jaya": {
+    "night_lights": 0.14801258119397115,
+    "daylight": 9577486953.44832
+  },
+  "nagan raya": {
+    "night_lights": 0.16507311605427824,
+    "daylight": 9624809574.195454
+  },
+  "aceh tamiang": {
+    "night_lights": 0.21513698700485762,
+    "daylight": 9581609715.129211
+  },
+  "bener meriah": {
+    "night_lights": 0.29343413746678704,
+    "daylight": 9569055032.553776
+  },
+  "pidie jaya": {
+    "night_lights": 0.8591500898254235,
+    "daylight": 9364230839.44478
+  },
+  "banda aceh": {
+    "night_lights": 11.764996257746366,
+    "daylight": 10102543749.316607
+  },
+  "sabang": {
+    "night_lights": 0.527377991612003,
+    "daylight": 10520803910.156288
+  },
+  "lhokseumawe": {
+    "night_lights": 9.61415828981317,
+    "daylight": 9664710551.453705
+  },
+  "langsa": {
+    "night_lights": 0.663809591381184,
+    "daylight": 9776169234.931358
+  },
+  "subulussalam": {
+    "night_lights": 0.25965223751459643,
+    "daylight": 10119811856.5262
+  },
+  "tapanuli tengah": {
+    "night_lights": 0.12188607143632602,
+    "daylight": 10183835525.996637
+  },
+  "tapanuli utara": {
+    "night_lights": 0.28982256769941594,
+    "daylight": 9504879011.093475
+  },
+  "tapanuli selatan": {
+    "night_lights": 0.030393662800315656,
+    "daylight": 10491571885.729774
+  },
+  "nias": {
+    "night_lights": 0.33087869612801535,
+    "daylight": 10733047045.644623
+  },
+  "langkat": {
+    "night_lights": 0.16834675693168108,
+    "daylight": 9557775453.699327
+  },
+  "karo": { "night_lights": 0.6872094176862211, "daylight": 9123421970.82206 },
+  "deli serdang": {
+    "night_lights": 4.712381114059442,
+    "daylight": 9738229046.309286
+  },
+  "simalungun": {
+    "night_lights": 0.14418647437500037,
+    "daylight": 9047095024.518963
+  },
+  "asahan": {
+    "night_lights": 0.6876152142850639,
+    "daylight": 9660543072.522873
+  },
+  "labuhanbatu": {
+    "night_lights": 0.2046265892561373,
+    "daylight": 10204653947.527376
+  },
+  "dairi": {
+    "night_lights": 0.8182525681252896,
+    "daylight": 9200026444.406588
+  },
+  "toba samosir": {
+    "night_lights": 0.7577799809902223,
+    "daylight": 9543154789.073786
+  },
+  "mandailing natal": {
+    "night_lights": 0.30802608381860613,
+    "daylight": 10489462689.443354
+  },
+  "nias selatan": {
+    "night_lights": 0.29142304689503923,
+    "daylight": 10931660939.08606
+  },
+  "pakpak bharat": {
+    "night_lights": 0.3130133634302797,
+    "daylight": 9353167846.29138
+  },
+  "humbang hasundutan": {
+    "night_lights": 0.16025500790144726,
+    "daylight": 9840094788.155075
+  },
+  "samosir": {
+    "night_lights": 0.060433614286337096,
+    "daylight": 9322641837.231636
+  },
+  "serdang bedagai": {
+    "night_lights": 0.5140445920283122,
+    "daylight": 9601252126.466211
+  },
+  "batu bara": {
+    "night_lights": 0.16702468097882844,
+    "daylight": 10016184365.501501
+  },
+  "padang lawas utara": {
+    "night_lights": 0.2318756761847712,
+    "daylight": 10220145577.197802
+  },
+  "padang lawas": {
+    "night_lights": 0.06968245662991582,
+    "daylight": 10284014295.97214
+  },
+  "labuhanbatu selatan": {
+    "night_lights": 0.25604645257621317,
+    "daylight": 10059335943.048098
+  },
+  "labuhanbatu utara": {
+    "night_lights": 0.2921954243942724,
+    "daylight": 9747341647.264063
+  },
+  "nias utara": {
+    "night_lights": 0.23840740939400523,
+    "daylight": 11636707081.35486
+  },
+  "nias barat": {
+    "night_lights": 0.3024313054456589,
+    "daylight": 10941488427.302309
+  },
+  "medan": { "night_lights": 18.298299325390474, "daylight": 9444989346.09484 },
+  "pematangsiantar": {
+    "night_lights": 3.7104693372962747,
+    "daylight": 9558236357.250685
+  },
+  "sibolga": {
+    "night_lights": 0.020110037754000953,
+    "daylight": 10291901506.763529
+  },
+  "tanjung balai": {
+    "night_lights": 1.2557496660739396,
+    "daylight": 10080338476.482487
+  },
+  "binjai": { "night_lights": 5.038119158537525, "daylight": 9363639884.92064 },
+  "tebing tinggi": {
+    "night_lights": 3.6407524418500588,
+    "daylight": 9899040729.45826
+  },
+  "padang sidimpuan": {
+    "night_lights": 0.3119986563904328,
+    "daylight": 9962948386.386185
+  },
+  "gunungsitoli": {
+    "night_lights": 0.3373679938848814,
+    "daylight": 10778814656.80552
+  },
+  "pesisir selatan": { "night_lights": 0.0, "daylight": 12740306548.630959 },
+  "solok": {
+    "night_lights": 0.8110064576588986,
+    "daylight": 10597024734.711397
+  },
+  "sijunjung": {
+    "night_lights": 0.031781673374156376,
+    "daylight": 10750318792.991306
+  },
+  "tanah datar": {
+    "night_lights": 0.06166995450628993,
+    "daylight": 10988323603.713953
+  },
+  "padang pariaman": {
+    "night_lights": 0.08583886229397054,
+    "daylight": 11643676183.178312
+  },
+  "agam": {
+    "night_lights": 0.001450907466604096,
+    "daylight": 11595602726.483774
+  },
+  "lima puluh kota": {
+    "night_lights": 0.5298095104605848,
+    "daylight": 10804610647.301136
+  },
+  "pasaman": {
+    "night_lights": 0.3580286353715293,
+    "daylight": 10243585469.56471
+  },
+  "kepulauan mentawai": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "dharmasraya": {
+    "night_lights": 0.411142339074552,
+    "daylight": 11861894236.097637
+  },
+  "solok selatan": {
+    "night_lights": 0.21446278195645324,
+    "daylight": 11500604838.431978
+  },
+  "pasaman barat": {
+    "night_lights": 0.03615893022983116,
+    "daylight": 11377586033.48952
+  },
+  "padang": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "sawahlunto": {
+    "night_lights": 0.0676225930685208,
+    "daylight": 10720114643.450691
+  },
+  "padang panjang": {
+    "night_lights": 0.31598568438073454,
+    "daylight": 11067177040.78885
+  },
+  "bukittinggi": {
+    "night_lights": 0.09890096615898622,
+    "daylight": 11039066440.114372
+  },
+  "payakumbuh": {
+    "night_lights": 1.965361495755664,
+    "daylight": 10756489730.985401
+  },
+  "pariaman": {
+    "night_lights": 0.30499921593711526,
+    "daylight": 11743976212.0
+  },
+  "kampar": {
+    "night_lights": 0.1674428311929754,
+    "daylight": 10772329742.4636
+  },
+  "indragiri hulu": {
+    "night_lights": 0.5476627109485893,
+    "daylight": 11336859202.269472
+  },
+  "bengkalis": {
+    "night_lights": 0.325012743582561,
+    "daylight": 10433387783.344374
+  },
+  "indragiri hilir": {
+    "night_lights": 0.05834670534864296,
+    "daylight": 10950933028.433054
+  },
+  "pelalawan": {
+    "night_lights": 0.39183764303912516,
+    "daylight": 10495539779.580177
+  },
+  "rokan hulu": {
+    "night_lights": 0.19422214184583472,
+    "daylight": 10644620671.552925
+  },
+  "rokan hilir": {
+    "night_lights": 0.0011650832770785458,
+    "daylight": 10614625523.042974
+  },
+  "siak": {
+    "night_lights": 0.3243399502536694,
+    "daylight": 10231015222.298103
+  },
+  "kuantan singingi": {
+    "night_lights": 0.36460125005925836,
+    "daylight": 11745006475.452143
+  },
+  "kepulauan meranti": {
+    "night_lights": 0.21449283298700295,
+    "daylight": 10732357017.860762
+  },
+  "pekanbaru": {
+    "night_lights": 3.5961476312594924,
+    "daylight": 10411338413.294003
+  },
+  "dumai": {
+    "night_lights": 10.135553813884316,
+    "daylight": 10620914615.18933
+  },
+  "kerinci": {
+    "night_lights": 0.08519267985571859,
+    "daylight": 10911465949.22938
+  },
+  "merangin": {
+    "night_lights": 0.09760594221212229,
+    "daylight": 12411489297.03194
+  },
+  "sarolangun": {
+    "night_lights": 0.2165395353613296,
+    "daylight": 12612731774.939928
+  },
+  "batanghari": {
+    "night_lights": 0.3829354459816323,
+    "daylight": 12034687887.523577
+  },
+  "muaro jambi": {
+    "night_lights": 0.33165906007642665,
+    "daylight": 11604464295.509092
+  },
+  "tanjung jabung barat": {
+    "night_lights": 0.3835186520914907,
+    "daylight": 11018125852.775173
+  },
+  "tanjung jabung timur": {
+    "night_lights": 0.36655334277085566,
+    "daylight": 12061337215.587196
+  },
+  "bungo": {
+    "night_lights": 0.4643773055481075,
+    "daylight": 11990862531.190392
+  },
+  "tebo": { "night_lights": 0.5687326195637344, "daylight": 12216039165.39566 },
+  "sungai penuh": {
+    "night_lights": 0.003193854238297677,
+    "daylight": 11020234814.484255
+  },
+  "ogan komering ulu": {
+    "night_lights": 0.21406422275591455,
+    "daylight": 13284848973.570549
+  },
+  "ogan komering ilir": {
+    "night_lights": 0.16382226590613927,
+    "daylight": 12329954528.872982
+  },
+  "muara enim": {
+    "night_lights": 0.41756016574817845,
+    "daylight": 13600478910.854975
+  },
+  "lahat": {
+    "night_lights": 0.4508382619892097,
+    "daylight": 12952990259.823174
+  },
+  "musi rawas": {
+    "night_lights": 0.4253858942353407,
+    "daylight": 12899213322.82888
+  },
+  "musi banyuasin": {
+    "night_lights": 0.6560893770721798,
+    "daylight": 12730709937.374952
+  },
+  "banyuasin": {
+    "night_lights": 0.47734778914305515,
+    "daylight": 12415920917.24148
+  },
+  "ogan komering ulu timur": {
+    "night_lights": 0.20882816473657514,
+    "daylight": 13929520543.47927
+  },
+  "ogan komering ulu selatan": {
+    "night_lights": 0.4624203944577807,
+    "daylight": 13815642991.722279
+  },
+  "ogan ilir": {
+    "night_lights": 0.42503250588799113,
+    "daylight": 12882359899.859219
+  },
+  "empat lawang": {
+    "night_lights": 0.34428002689984977,
+    "daylight": 12751103386.70249
+  },
+  "penukal abab lematang ilir": {
+    "night_lights": 1.5233677852004983,
+    "daylight": 13196045052.867393
+  },
+  "musi rawas utara": {
+    "night_lights": 0.18169042906055327,
+    "daylight": 12273418536.383152
+  },
+  "palembang": {
+    "night_lights": 8.811376139166263,
+    "daylight": 12507663572.371239
+  },
+  "pagar alam": {
+    "night_lights": 0.27259151210826665,
+    "daylight": 12753710895.25633
+  },
+  "lubuklinggau": {
+    "night_lights": 2.8201127072542227,
+    "daylight": 12733172845.97078
+  },
+  "prabumulih": {
+    "night_lights": 0.9202355379224849,
+    "daylight": 13295704626.031378
+  },
+  "bengkulu selatan": {
+    "night_lights": 1.0093813074766032,
+    "daylight": 13952699651.421652
+  },
+  "rejang lebong": {
+    "night_lights": 0.40759750111706416,
+    "daylight": 12395810787.768465
+  },
+  "bengkulu utara": {
+    "night_lights": 0.24026159648470832,
+    "daylight": 13042123098.890257
+  },
+  "kaur": {
+    "night_lights": 0.2323570373340952,
+    "daylight": 12374202581.017097
+  },
+  "seluma": {
+    "night_lights": 0.2746193625240304,
+    "daylight": 14033174899.052896
+  },
+  "mukomuko": { "night_lights": 0.0, "daylight": 12824472738.061491 },
+  "lebong": {
+    "night_lights": 0.12225699871093013,
+    "daylight": 11650186439.057953
+  },
+  "kepahiang": {
+    "night_lights": 0.2223274861267683,
+    "daylight": 12581934221.919247
+  },
+  "bengkulu tengah": {
+    "night_lights": 0.3097594974369687,
+    "daylight": 13087122027.321545
+  },
+  "lampung selatan": {
+    "night_lights": 1.7933577537422671,
+    "daylight": 14931617088.26787
+  },
+  "lampung tengah": {
+    "night_lights": 0.5823449454234857,
+    "daylight": 13868215242.659496
+  },
+  "lampung utara": {
+    "night_lights": 0.6122550828161809,
+    "daylight": 14143564217.29554
+  },
+  "lampung barat": {
+    "night_lights": 0.40987159062352085,
+    "daylight": 13142077888.302454
+  },
+  "tulang bawang": {
+    "night_lights": 0.7958969668209224,
+    "daylight": 13351206449.988575
+  },
+  "tanggamus": {
+    "night_lights": 0.46307942150611314,
+    "daylight": 14498967459.932682
+  },
+  "lampung timur": {
+    "night_lights": 1.1765933823553392,
+    "daylight": 14192545579.180483
+  },
+  "way kanan": {
+    "night_lights": 0.038138635388582975,
+    "daylight": 14107479157.885677
+  },
+  "pesawaran": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "pringsewu": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "mesuji": {
+    "night_lights": 0.5608472399508075,
+    "daylight": 12740879376.544062
+  },
+  "tulang bawang barat": {
+    "night_lights": 0.5771741196353621,
+    "daylight": 13527203550.419594
+  },
+  "pesisir barat": {
+    "night_lights": 0.4095444461299162,
+    "daylight": 14143612168.446152
+  },
+  "bandar lampung": {
+    "night_lights": 12.304177224369287,
+    "daylight": 14065928772.384207
+  },
+  "metro": { "night_lights": 4.396810555510102, "daylight": 13497502948.43247 },
+  "bangka": {
+    "night_lights": 0.36056431025078084,
+    "daylight": 12469401336.263935
+  },
+  "belitung": {
+    "night_lights": 0.3910037580356523,
+    "daylight": 13729983735.348083
+  },
+  "bangka selatan": { "night_lights": 0.20640580135667508, "daylight": 0.0 },
+  "bangka tengah": {
+    "night_lights": 0.26589732037746966,
+    "daylight": 13633738866.0
+  },
+  "bangka barat": {
+    "night_lights": 0.24223596238554962,
+    "daylight": 11946861610.0
+  },
+  "belitung timur": {
+    "night_lights": 0.33789214490993325,
+    "daylight": 13744844777.935106
+  },
+  "pangkalpinang": {
+    "night_lights": 4.961309007668268,
+    "daylight": 12501347238.087881
+  },
+  "bintan": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "karimun": {
+    "night_lights": 0.10126996896718082,
+    "daylight": 11121618878.46252
+  },
+  "natuna": { "night_lights": 0.21057235995615844, "daylight": 0.0 },
+  "lingga": { "night_lights": 0.14510157937749485, "daylight": 0.0 },
+  "kepulauan anambas": {
+    "night_lights": 0.3108359905861492,
+    "daylight": 11894573801.655418
+  },
+  "batam": {
+    "night_lights": 2.5818743803272186,
+    "daylight": 11295601122.352407
+  },
+  "tanjungpinang": {
+    "night_lights": 0.40746649871220153,
+    "daylight": 11369366087.75364
+  },
+  "kepulauan seribu": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "jakarta utara": {
+    "night_lights": 39.77878131932186,
+    "daylight": 15239573982.537819
+  },
+  "jakarta barat": {
+    "night_lights": 36.643174725673184,
+    "daylight": 15057166100.197512
+  },
+  "jakarta selatan": {
+    "night_lights": 37.25338057383128,
+    "daylight": 15010992547.007507
+  },
+  "jakarta timur": {
+    "night_lights": 24.88783054965559,
+    "daylight": 14994077933.693289
+  },
+  "bogor": {
+    "night_lights": 16.143941096826875,
+    "daylight": 14139060086.081621
+  },
+  "sukabumi": {
+    "night_lights": 4.950188425173301,
+    "daylight": 13953680374.256277
+  },
+  "cianjur": {
+    "night_lights": 0.6292740940237667,
+    "daylight": 13765280497.295784
+  },
+  "bandung": {
+    "night_lights": 13.294441133986046,
+    "daylight": 13362042360.518003
+  },
+  "garut": {
+    "night_lights": 1.4940613194615413,
+    "daylight": 12674875985.018293
+  },
+  "tasikmalaya": {
+    "night_lights": 4.852719491047611,
+    "daylight": 12672888735.001348
+  },
+  "ciamis": {
+    "night_lights": 0.6072193923418222,
+    "daylight": 13089241471.234526
+  },
+  "kuningan": {
+    "night_lights": 3.630233163497899,
+    "daylight": 14214690830.971773
+  },
+  "cirebon": {
+    "night_lights": 11.473918362897788,
+    "daylight": 14809810245.683075
+  },
+  "majalengka": {
+    "night_lights": 0.9534197438211484,
+    "daylight": 13078076655.745253
+  },
+  "sumedang": {
+    "night_lights": 0.6855143433022958,
+    "daylight": 13705451376.025522
+  },
+  "indramayu": {
+    "night_lights": 1.9453827865209792,
+    "daylight": 15491105151.670918
+  },
+  "subang": {
+    "night_lights": 2.5614260209079496,
+    "daylight": 15429301509.90031
+  },
+  "purwakarta": {
+    "night_lights": 1.2389713759447893,
+    "daylight": 13989157325.236876
+  },
+  "karawang": {
+    "night_lights": 1.184738798098794,
+    "daylight": 15519809193.475565
+  },
+  "bekasi": {
+    "night_lights": 21.584597468079263,
+    "daylight": 14961056364.703491
+  },
+  "bandung barat": {
+    "night_lights": 0.9198619280131412,
+    "daylight": 13472661161.423086
+  },
+  "pangandaran": {
+    "night_lights": 0.473853215698895,
+    "daylight": 13624878700.298098
+  },
+  "depok": {
+    "night_lights": 14.079899954005835,
+    "daylight": 14436659026.324188
+  },
+  "cimahi": {
+    "night_lights": 10.070873752653343,
+    "daylight": 13480790165.243734
+  },
+  "banjar": {
+    "night_lights": 2.4049295017108987,
+    "daylight": 12352148037.27717
+  },
+  "cilacap": {
+    "night_lights": 0.594202793658839,
+    "daylight": 14397017547.807007
+  },
+  "banyumas": {
+    "night_lights": 6.884542684437905,
+    "daylight": 13439910968.097467
+  },
+  "purbalingga": {
+    "night_lights": 1.2622759090275595,
+    "daylight": 13486314018.096315
+  },
+  "banjarnegara": {
+    "night_lights": 2.004960565314984,
+    "daylight": 13493483068.912018
+  },
+  "kebumen": {
+    "night_lights": 0.6707228028422206,
+    "daylight": 13809490931.201902
+  },
+  "purworejo": {
+    "night_lights": 0.7980280082193897,
+    "daylight": 14020064775.51279
+  },
+  "wonosobo": {
+    "night_lights": 0.6461559949845137,
+    "daylight": 13763401659.920492
+  },
+  "magelang": {
+    "night_lights": 4.052627471232752,
+    "daylight": 13931461344.199423
+  },
+  "boyolali": {
+    "night_lights": 1.1635956541759518,
+    "daylight": 15262291126.402824
+  },
+  "klaten": {
+    "night_lights": 6.334017699384282,
+    "daylight": 14722798881.17487
+  },
+  "sukoharjo": {
+    "night_lights": 8.314119086503444,
+    "daylight": 14529154361.887613
+  },
+  "wonogiri": {
+    "night_lights": 1.1997842571181767,
+    "daylight": 14718298289.466887
+  },
+  "karanganyar": {
+    "night_lights": 1.405328204491008,
+    "daylight": 15052702913.359074
+  },
+  "sragen": {
+    "night_lights": 0.7468261046540087,
+    "daylight": 15617889512.901478
+  },
+  "grobogan": {
+    "night_lights": 2.374662871417908,
+    "daylight": 15138132094.102886
+  },
+  "blora": {
+    "night_lights": 0.7985346037545935,
+    "daylight": 16397954351.982668
+  },
+  "rembang": {
+    "night_lights": 1.527453502074207,
+    "daylight": 16439333209.20034
+  },
+  "pati": { "night_lights": 2.315920575744589, "daylight": 16421061294.90936 },
+  "kudus": {
+    "night_lights": 1.1667101965655948,
+    "daylight": 16586854168.638489
+  },
+  "jepara": {
+    "night_lights": 1.4098205168474913,
+    "daylight": 16533950902.407356
+  },
+  "demak": {
+    "night_lights": 2.1003162151249937,
+    "daylight": 15715600279.362232
+  },
+  "semarang": {
+    "night_lights": 6.049271878108715,
+    "daylight": 15000760650.245462
+  },
+  "temanggung": {
+    "night_lights": 1.1601278347879505,
+    "daylight": 14053484428.363684
+  },
+  "kendal": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "batang": {
+    "night_lights": 2.032613824411403,
+    "daylight": 14591216110.942139
+  },
+  "pekalongan": {
+    "night_lights": 8.641753419090163,
+    "daylight": 14599608368.98224
+  },
+  "pemalang": {
+    "night_lights": 1.5303791486020697,
+    "daylight": 14242927423.700203
+  },
+  "tegal": {
+    "night_lights": 11.344967698932178,
+    "daylight": 15055112265.833988
+  },
+  "brebes": {
+    "night_lights": 1.583008994165672,
+    "daylight": 14357902416.259378
+  },
+  "surakarta": {
+    "night_lights": 17.2506425559269,
+    "daylight": 14672727102.14483
+  },
+  "salatiga": {
+    "night_lights": 6.046038633669989,
+    "daylight": 14375632057.524282
+  },
+  "kulon progo": {
+    "night_lights": 1.5123929919583852,
+    "daylight": 14607781532.948303
+  },
+  "gunungkidul": {
+    "night_lights": 1.7637717777277746,
+    "daylight": 15730233009.157824
+  },
+  "sleman": {
+    "night_lights": 1.8752434209747357,
+    "daylight": 14562132510.32153
+  },
+  "yogyakarta": {
+    "night_lights": 14.031011162936156,
+    "daylight": 15127194840.547365
+  },
+  "pacitan": {
+    "night_lights": 0.9170811302762935,
+    "daylight": 14825681268.634428
+  },
+  "ponorogo": {
+    "night_lights": 0.43015757736167376,
+    "daylight": 14631664341.087666
+  },
+  "trenggalek": {
+    "night_lights": 1.2019435112500236,
+    "daylight": 14789743527.801535
+  },
+  "tulungagung": {
+    "night_lights": 1.6889028974911624,
+    "daylight": 14829041650.493586
+  },
+  "blitar": { "night_lights": 0.4261077939118162, "daylight": 16285561738.0 },
+  "kediri": {
+    "night_lights": 1.1734420567092452,
+    "daylight": 16301215308.35807
+  },
+  "malang": {
+    "night_lights": 3.1088597147692374,
+    "daylight": 16870295399.414848
+  },
+  "lumajang": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "jember": {
+    "night_lights": 0.5112084107856796,
+    "daylight": 14957537165.526014
+  },
+  "banyuwangi": {
+    "night_lights": 2.3462687826788997,
+    "daylight": 16613489287.813734
+  },
+  "bondowoso": {
+    "night_lights": 1.566466637269494,
+    "daylight": 14629109459.94079
+  },
+  "situbondo": {
+    "night_lights": 0.857573672741011,
+    "daylight": 15800317432.580057
+  },
+  "probolinggo": {
+    "night_lights": 1.6293474051153019,
+    "daylight": 16502026858.557377
+  },
+  "pasuruan": {
+    "night_lights": 4.965254741367001,
+    "daylight": 14888187523.861107
+  },
+  "mojokerto": {
+    "night_lights": 10.843767753582588,
+    "daylight": 14711139905.040829
+  },
+  "jombang": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "nganjuk": {
+    "night_lights": 1.8291500365360884,
+    "daylight": 14804891881.027884
+  },
+  "madiun": {
+    "night_lights": 9.524285461701208,
+    "daylight": 14664601262.605461
+  },
+  "magetan": {
+    "night_lights": 2.593379653470466,
+    "daylight": 14905088781.133333
+  },
+  "ngawi": {
+    "night_lights": 1.4740963264887081,
+    "daylight": 15496451956.094923
+  },
+  "bojonegoro": {
+    "night_lights": 5.260335614682937,
+    "daylight": 15976136210.310482
+  },
+  "tuban": {
+    "night_lights": 1.6124428979557692,
+    "daylight": 16034379966.89822
+  },
+  "lamongan": {
+    "night_lights": 8.170187091526401,
+    "daylight": 14479414376.298807
+  },
+  "gresik": {
+    "night_lights": 10.67274149252395,
+    "daylight": 14745983867.919168
+  },
+  "bangkalan": {
+    "night_lights": 1.8604102160619318,
+    "daylight": 15982934894.894417
+  },
+  "sampang": {
+    "night_lights": 2.6091983071700344,
+    "daylight": 16314321119.968935
+  },
+  "pamekasan": {
+    "night_lights": 1.0706221717704032,
+    "daylight": 16318944793.581964
+  },
+  "sumenep": {
+    "night_lights": 2.875033266381069,
+    "daylight": 16179940796.729445
+  },
+  "surabaya": { "night_lights": 0.3644548207618265, "daylight": 0.0 },
+  "batu": {
+    "night_lights": 1.7923175405166296,
+    "daylight": 16574074524.091364
+  },
+  "pandeglang": {
+    "night_lights": 0.882960574758349,
+    "daylight": 15383207114.343409
+  },
+  "lebak": {
+    "night_lights": 0.39087275764923485,
+    "daylight": 14020366479.249079
+  },
+  "tangerang": {
+    "night_lights": 32.2261165687988,
+    "daylight": 14963977713.6733
+  },
+  "serang": {
+    "night_lights": 8.764498879848066,
+    "daylight": 15043779725.19821
+  },
+  "cilegon": {
+    "night_lights": 15.063814628392825,
+    "daylight": 15228005181.166752
+  },
+  "tangerang selatan": {
+    "night_lights": 20.492896548169735,
+    "daylight": 14614272388.849613
+  },
+  "jembrana": {
+    "night_lights": 1.8312592852837641,
+    "daylight": 17511353653.44327
+  },
+  "tabanan": {
+    "night_lights": 0.5833916105827811,
+    "daylight": 17247728586.116734
+  },
+  "badung": {
+    "night_lights": 8.616607496146761,
+    "daylight": 16857880533.575457
+  },
+  "gianyar": {
+    "night_lights": 1.9510101403296485,
+    "daylight": 16778006893.88473
+  },
+  "klungkung": {
+    "night_lights": 1.4541889736402476,
+    "daylight": 16613215882.833212
+  },
+  "bangli": {
+    "night_lights": 0.7400123563239255,
+    "daylight": 16843066070.168198
+  },
+  "karangasem": {
+    "night_lights": 0.6665290781366855,
+    "daylight": 16823476372.0
+  },
+  "buleleng": { "night_lights": 0.609714896952377, "daylight": 16847079712.0 },
+  "denpasar": {
+    "night_lights": 8.151255919567717,
+    "daylight": 16834429248.907158
+  },
+  "lombok barat": {
+    "night_lights": 1.3776994979110289,
+    "daylight": 16872556215.480728
+  },
+  "lombok tengah": {
+    "night_lights": 0.4605604665548855,
+    "daylight": 17452327724.969215
+  },
+  "lombok timur": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "sumbawa": {
+    "night_lights": 0.29639152331634333,
+    "daylight": 15591079738.928213
+  },
+  "dompu": {
+    "night_lights": 0.41481544720080366,
+    "daylight": 17570859801.5786
+  },
+  "bima": {
+    "night_lights": 2.0413657371100977,
+    "daylight": 17548251448.520813
+  },
+  "sumbawa barat": {
+    "night_lights": 1.304335743675954,
+    "daylight": 17163342162.0
+  },
+  "lombok utara": {
+    "night_lights": 0.6717322025090667,
+    "daylight": 17295223183.04879
+  },
+  "mataram": {
+    "night_lights": 6.64695442281541,
+    "daylight": 17028161641.033669
+  },
+  "kupang": {
+    "night_lights": 8.951327394114887,
+    "daylight": 15992862451.835285
+  },
+  "timor tengah selatan": {
+    "night_lights": 0.20358804861903332,
+    "daylight": 16027740772.998795
+  },
+  "timor tengah utara": {
+    "night_lights": 0.25091671399601073,
+    "daylight": 16086265577.986208
+  },
+  "belu": {
+    "night_lights": 0.30995123736771263,
+    "daylight": 15827159090.895638
+  },
+  "alor": { "night_lights": 0.028940436761767503, "daylight": 16912919974.0 },
+  "flores timur": {
+    "night_lights": 0.3002898097928092,
+    "daylight": 16883981640.669256
+  },
+  "sikka": {
+    "night_lights": 0.276472694566806,
+    "daylight": 17270042513.104893
+  },
+  "ende": {
+    "night_lights": 0.21559196934435462,
+    "daylight": 16325606441.291346
+  },
+  "ngada": {
+    "night_lights": 0.2942484282895244,
+    "daylight": 14833469672.79738
+  },
+  "manggarai": {
+    "night_lights": 0.08941755599269988,
+    "daylight": 16127157610.000004
+  },
+  "sumba timur": {
+    "night_lights": 0.27935185062169143,
+    "daylight": 17074880082.081493
+  },
+  "sumba barat": {
+    "night_lights": 0.32688702504265815,
+    "daylight": 16280489409.323313
+  },
+  "lembata": { "night_lights": 0.2597438303826266, "daylight": 16641323988.0 },
+  "rote ndao": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "manggarai barat": {
+    "night_lights": 0.36379718399161626,
+    "daylight": 17064248645.098703
+  },
+  "nagekeo": {
+    "night_lights": 0.31494708821227374,
+    "daylight": 15225791875.696894
+  },
+  "sumba tengah": {
+    "night_lights": 0.318914908922523,
+    "daylight": 15963798256.838188
+  },
+  "sumba barat daya": {
+    "night_lights": 0.2829227555818312,
+    "daylight": 16731005870.287897
+  },
+  "manggarai timur": {
+    "night_lights": 0.26918148575004947,
+    "daylight": 15321499426.385662
+  },
+  "sabu raijua": { "night_lights": 0.298380799475057, "daylight": 0.0 },
+  "malaka": {
+    "night_lights": 0.41070362060915566,
+    "daylight": 16458170914.75065
+  },
+  "sambas": {
+    "night_lights": 0.008485456809199628,
+    "daylight": 10570248994.851826
+  },
+  "mempawah": {
+    "night_lights": 1.0913107107633462,
+    "daylight": 11408951037.14123
+  },
+  "sanggau": {
+    "night_lights": 0.20442196169397245,
+    "daylight": 10798257331.801619
+  },
+  "ketapang": {
+    "night_lights": 0.24609399398809978,
+    "daylight": 11196921239.617533
+  },
+  "sintang": {
+    "night_lights": 0.31798210257444137,
+    "daylight": 11227056546.773071
+  },
+  "kapuas hulu": {
+    "night_lights": 0.033190817030975275,
+    "daylight": 11174037532.356586
+  },
+  "bengkayang": {
+    "night_lights": 0.19909889263303623,
+    "daylight": 10284543741.341068
+  },
+  "landak": {
+    "night_lights": 0.2196199312050937,
+    "daylight": 10790372376.453285
+  },
+  "sekadau": {
+    "night_lights": 0.24856974532845735,
+    "daylight": 11106984261.589478
+  },
+  "melawi": {
+    "night_lights": 0.20928509104842125,
+    "daylight": 11297020116.044771
+  },
+  "kayong utara": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "kubu raya": {
+    "night_lights": 0.27447164502009946,
+    "daylight": 11038179196.781605
+  },
+  "pontianak": {
+    "night_lights": 11.069397006310382,
+    "daylight": 10920423118.71718
+  },
+  "singkawang": {
+    "night_lights": 0.018200563896319178,
+    "daylight": 10929166507.267996
+  },
+  "kotawaringin barat": { "night_lights": 0.0, "daylight": 11853037985.335886 },
+  "kotawaringin timur": {
+    "night_lights": 0.18686098245495356,
+    "daylight": 12127158731.164059
+  },
+  "kapuas": {
+    "night_lights": 0.38080323170737856,
+    "daylight": 11966003702.033133
+  },
+  "barito selatan": {
+    "night_lights": 0.21178289314088086,
+    "daylight": 11656580587.29384
+  },
+  "barito utara": {
+    "night_lights": 0.2264472650333018,
+    "daylight": 11472695647.921356
+  },
+  "katingan": {
+    "night_lights": 0.11029071596489441,
+    "daylight": 11747606232.979713
+  },
+  "seruyan": {
+    "night_lights": 0.0007811272559601437,
+    "daylight": 11891019599.120108
+  },
+  "sukamara": {
+    "night_lights": 0.014422400687139979,
+    "daylight": 11743968299.135197
+  },
+  "lamandau": {
+    "night_lights": 0.18359712680452975,
+    "daylight": 11949048395.286594
+  },
+  "gunung mas": {
+    "night_lights": 0.1738874582294765,
+    "daylight": 11486120119.402224
+  },
+  "pulang pisau": {
+    "night_lights": 0.240738547012862,
+    "daylight": 12831268817.799797
+  },
+  "murung raya": {
+    "night_lights": 0.023165885254487168,
+    "daylight": 11044198153.042057
+  },
+  "barito timur": {
+    "night_lights": 0.41007294302815417,
+    "daylight": 12116586047.788834
+  },
+  "palangkaraya": {
+    "night_lights": 0.25917887807708934,
+    "daylight": 11462159198.26855
+  },
+  "tanah laut": {
+    "night_lights": 0.4286122204538132,
+    "daylight": 12517140249.745934
+  },
+  "kotabaru": {
+    "night_lights": 0.31442863255309145,
+    "daylight": 14274258524.170202
+  },
+  "barito kuala": {
+    "night_lights": 0.2925326663957171,
+    "daylight": 12099752507.254936
+  },
+  "tapin": {
+    "night_lights": 0.5749649571215815,
+    "daylight": 12112689996.893467
+  },
+  "hulu sungai selatan": {
+    "night_lights": 0.23634934186970774,
+    "daylight": 12396611801.729237
+  },
+  "hulu sungai tengah": {
+    "night_lights": 0.3650904520708735,
+    "daylight": 12398251919.83956
+  },
+  "hulu sungai utara": {
+    "night_lights": 0.46698598313110556,
+    "daylight": 12627118736.456219
+  },
+  "tabalong": {
+    "night_lights": 0.2639015320201484,
+    "daylight": 11848064936.248114
+  },
+  "tanah bumbu": {
+    "night_lights": 0.4448329572199219,
+    "daylight": 13291144891.880667
+  },
+  "balangan": {
+    "night_lights": 0.07543155723380122,
+    "daylight": 12173658170.089182
+  },
+  "banjarmasin": {
+    "night_lights": 12.066488175998453,
+    "daylight": 12232788489.473278
+  },
+  "banjarbaru": {
+    "night_lights": 3.3657490197716027,
+    "daylight": 12489033723.362976
+  },
+  "paser": {
+    "night_lights": 0.24508055919005953,
+    "daylight": 11930604348.675117
+  },
+  "kutai kartanegara": {
+    "night_lights": 0.07470626730738572,
+    "daylight": 12270530490.532503
+  },
+  "berau": {
+    "night_lights": 0.16359084739052943,
+    "daylight": 12140571134.451427
+  },
+  "kutai barat": {
+    "night_lights": 0.6083649662771814,
+    "daylight": 12202368731.488598
+  },
+  "kutai timur": {
+    "night_lights": 0.3819164986540985,
+    "daylight": 12553960857.008318
+  },
+  "penajam paser utara": {
+    "night_lights": 0.4692789050007158,
+    "daylight": 12167410004.500736
+  },
+  "mahakam ulu": {
+    "night_lights": 0.24976952694946983,
+    "daylight": 11012486720.487003
+  },
+  "balikpapan": {
+    "night_lights": 32.62701555662634,
+    "daylight": 13051730174.0
+  },
+  "samarinda": {
+    "night_lights": 4.111401112792407,
+    "daylight": 12807067034.00419
+  },
+  "bontang": {
+    "night_lights": 6.877091277976891,
+    "daylight": 12565375297.50429
+  },
+  "bulungan": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "malinau": {
+    "night_lights": 0.19318446162146882,
+    "daylight": 12035002628.95605
+  },
+  "nunukan": {
+    "night_lights": 0.10917527300651747,
+    "daylight": 12479421167.633394
+  },
+  "tana tidung": {
+    "night_lights": 0.2660189420341048,
+    "daylight": 12412467989.64776
+  },
+  "tarakan": { "night_lights": 1.8536015185970662, "daylight": 12962203932.0 },
+  "bolaang mongondow": {
+    "night_lights": 0.447992212885265,
+    "daylight": 13245177472.488283
+  },
+  "minahasa": {
+    "night_lights": 0.776065449337324,
+    "daylight": 14023806469.05505
+  },
+  "kepulauan sangihe": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "kepulauan talaud": {
+    "night_lights": 0.20359929617598188,
+    "daylight": 13886810738.0
+  },
+  "minahasa selatan": {
+    "night_lights": 0.4144806964234724,
+    "daylight": 13731683545.900663
+  },
+  "minahasa utara": {
+    "night_lights": 0.32562316740215835,
+    "daylight": 14666964212.638178
+  },
+  "minahasa tenggara": {
+    "night_lights": 0.3146134636781709,
+    "daylight": 14238574264.809206
+  },
+  "bolaang mongondow utara": {
+    "night_lights": 0.24626521034709187,
+    "daylight": 14474914379.445715
+  },
+  "kep. siau tagulandang biaro": {
+    "night_lights": 0.18979744967953524,
+    "daylight": 0.0
+  },
+  "bolaang mongondow timur": {
+    "night_lights": 0.2086987684467034,
+    "daylight": 13651606283.62711
+  },
+  "bolaang mongondow selatan": {
+    "night_lights": 0.22129693482348664,
+    "daylight": 12372450580.446653
+  },
+  "manado": {
+    "night_lights": 9.150096470376067,
+    "daylight": 14486152495.78412
+  },
+  "bitung": { "night_lights": 1.2682128374850459, "daylight": 14904905262.0 },
+  "tomohon": {
+    "night_lights": 1.3009479561752335,
+    "daylight": 14430089901.49247
+  },
+  "kotamobagu": {
+    "night_lights": 1.7280920007263003,
+    "daylight": 13530665247.512661
+  },
+  "banggai": {
+    "night_lights": 0.20555327646029428,
+    "daylight": 13457258367.971924
+  },
+  "poso": {
+    "night_lights": 0.19587815371661133,
+    "daylight": 12514467894.687588
+  },
+  "donggala": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "tolitoli": { "night_lights": 0.2427202583437525, "daylight": 12593127960.0 },
+  "buol": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "morowali": {
+    "night_lights": 0.11496376191161611,
+    "daylight": 13938927991.370338
+  },
+  "banggai kepulauan": {
+    "night_lights": 0.2965807855315089,
+    "daylight": 15681250686.277412
+  },
+  "parigi moutong": {
+    "night_lights": 0.23696812577640936,
+    "daylight": 13468983557.912167
+  },
+  "tojo una-una": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "sigi": {
+    "night_lights": 0.2392760245168817,
+    "daylight": 12544492936.581366
+  },
+  "banggai laut": {
+    "night_lights": 0.33846410316816145,
+    "daylight": 15722011478.0
+  },
+  "morowali utara": {
+    "night_lights": 0.10892801632479464,
+    "daylight": 12803642163.212795
+  },
+  "palu": { "night_lights": 6.370600456692357, "daylight": 12701914776.060472 },
+  "kepulauan selayar": {
+    "night_lights": 0.23589173615554962,
+    "daylight": 16525172888.588438
+  },
+  "bulukumba": {
+    "night_lights": 0.5260494522429198,
+    "daylight": 15486833844.563438
+  },
+  "bantaeng": {
+    "night_lights": 0.9221745166942473,
+    "daylight": 14966919756.702826
+  },
+  "jeneponto": {
+    "night_lights": 0.8736137672530371,
+    "daylight": 15002988548.703302
+  },
+  "takalar": {
+    "night_lights": 1.280669193586146,
+    "daylight": 13882859586.138025
+  },
+  "gowa": {
+    "night_lights": 1.5702293234905422,
+    "daylight": 13825166983.836231
+  },
+  "sinjai": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "bone": {
+    "night_lights": 0.37329607103434426,
+    "daylight": 15008099999.68539
+  },
+  "maros": {
+    "night_lights": 3.636232580598423,
+    "daylight": 13678081330.831188
+  },
+  "pangkajene dan kepulauan": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "barru": {
+    "night_lights": 0.6015540020676454,
+    "daylight": 15051356524.288065
+  },
+  "soppeng": {
+    "night_lights": 0.5270101831722643,
+    "daylight": 15043963695.286016
+  },
+  "wajo": { "night_lights": 0.3620917474944508, "daylight": 14260064150.0 },
+  "sidenreng rappang": {
+    "night_lights": 0.3290061956929575,
+    "daylight": 14046191390.869164
+  },
+  "pinrang": {
+    "night_lights": 0.45720115519287324,
+    "daylight": 13901660375.525166
+  },
+  "enrekang": {
+    "night_lights": 0.3388434271498583,
+    "daylight": 13242733738.994108
+  },
+  "luwu": {
+    "night_lights": 0.39927748330497675,
+    "daylight": 13543373263.037563
+  },
+  "tana toraja": {
+    "night_lights": 0.2341751177533844,
+    "daylight": 12552016470.271214
+  },
+  "luwu utara": { "night_lights": 0.0, "daylight": 13501126946.846983 },
+  "luwu timur": { "night_lights": 0.0, "daylight": 13119104665.051575 },
+  "toraja utara": {
+    "night_lights": 0.16290036834100355,
+    "daylight": 12400247814.23641
+  },
+  "makassar": {
+    "night_lights": 13.159285341349733,
+    "daylight": 13469592889.838688
+  },
+  "pare pare": {
+    "night_lights": 0.011126739423868753,
+    "daylight": 14750195774.545115
+  },
+  "palopo": { "night_lights": 0.0, "daylight": 13532349001.34227 },
+  "kolaka": { "night_lights": 0.0, "daylight": 14540822287.07305 },
+  "konawe": {
+    "night_lights": 0.29075870019260025,
+    "daylight": 14323637635.178865
+  },
+  "muna": { "night_lights": 0.3226650514495656, "daylight": 0.0 },
+  "buton": {
+    "night_lights": 0.3297638141198187,
+    "daylight": 15032631785.504274
+  },
+  "konawe selatan": {
+    "night_lights": 0.3311169760865423,
+    "daylight": 14888100227.453362
+  },
+  "bombana": {
+    "night_lights": 0.2844987161950938,
+    "daylight": 14652057086.348022
+  },
+  "wakatobi": { "night_lights": 0.2476534380810739, "daylight": 0.0 },
+  "kolaka utara": { "night_lights": 0.0, "daylight": 13474828089.983727 },
+  "konawe utara": {
+    "night_lights": 0.03324944665268247,
+    "daylight": 14473153477.895308
+  },
+  "buton utara": {
+    "night_lights": 0.20401279451990623,
+    "daylight": 15702504788.964417
+  },
+  "kolaka timur": {
+    "night_lights": 0.31902770556143845,
+    "daylight": 14505966210.145472
+  },
+  "konawe kepulauan": {
+    "night_lights": 0.2424932738013968,
+    "daylight": 15547849258.0
+  },
+  "muna barat": {
+    "night_lights": 0.25395584597155596,
+    "daylight": 15670805483.54659
+  },
+  "buton tengah": {
+    "night_lights": 0.5005377528818417,
+    "daylight": 14643417967.516874
+  },
+  "buton selatan": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "kendari": {
+    "night_lights": 8.188294474878848,
+    "daylight": 15025176907.783012
+  },
+  "bau bau": {
+    "night_lights": 2.614686299755615,
+    "daylight": 14843988000.48809
+  },
+  "boalemo": {
+    "night_lights": 0.2593473779136566,
+    "daylight": 14288822692.366096
+  },
+  "bone bolango": {
+    "night_lights": 0.22319342453519914,
+    "daylight": 13056867088.093279
+  },
+  "pahuwato": {
+    "night_lights": 0.17374668249082834,
+    "daylight": 13545226831.74551
+  },
+  "gorontalo utara": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "mamuju utara": {
+    "night_lights": 0.2767895021449523,
+    "daylight": 12718345890.786825
+  },
+  "mamuju": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "mamasa": {
+    "night_lights": 0.1572844959209213,
+    "daylight": 13102519067.380245
+  },
+  "polewali mandar": {
+    "night_lights": 0.1894703809397465,
+    "daylight": 13175181546.033203
+  },
+  "majene": {
+    "night_lights": 8.539932936885756e-5,
+    "daylight": 14057686110.141582
+  },
+  "mamuju tengah": {
+    "night_lights": 0.2916983727298634,
+    "daylight": 12064767071.317793
+  },
+  "maluku tengah": { "night_lights": 0.21869666984865718, "daylight": 0.0 },
+  "maluku tenggara": {
+    "night_lights": 0.46915436394390614,
+    "daylight": 15018416523.29335
+  },
+  "maluku tenggara barat": {
+    "night_lights": 0.15958169675264525,
+    "daylight": 0.0
+  },
+  "buru": {
+    "night_lights": 0.23517230309493645,
+    "daylight": 14070786900.126352
+  },
+  "seram bagian timur": {
+    "night_lights": 0.1984639793904578,
+    "daylight": 14551362571.795776
+  },
+  "seram bagian barat": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "kepulauan aru": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "maluku barat daya": { "night_lights": 0.20079756510571123, "daylight": 0.0 },
+  "buru selatan": {
+    "night_lights": 0.1987208809808651,
+    "daylight": 13074974140.421808
+  },
+  "ambon": {
+    "night_lights": 0.4758201966263446,
+    "daylight": 14967146525.538065
+  },
+  "tual": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "halmahera barat": {
+    "night_lights": 0.24357814959134913,
+    "daylight": 14804566512.11413
+  },
+  "halmahera tengah": {
+    "night_lights": 0.17979282520048528,
+    "daylight": 14417658311.917358
+  },
+  "halmahera utara": {
+    "night_lights": 0.20169508107760034,
+    "daylight": 14637588354.454475
+  },
+  "halmahera selatan": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "kepulauan sula": {
+    "night_lights": 0.19828233647081853,
+    "daylight": 15285297008.61843
+  },
+  "halmahera timur": {
+    "night_lights": 0.26891103360500884,
+    "daylight": 14420045635.366701
+  },
+  "pulau morotai": {
+    "night_lights": 0.1736232618681259,
+    "daylight": 14098109597.961054
+  },
+  "pulau taliabu": {
+    "night_lights": 0.22517350639484532,
+    "daylight": 13270983920.303047
+  },
+  "ternate": { "night_lights": 0.3022426391796306, "daylight": 15210522218.0 },
+  "tidore kepulauan": {
+    "night_lights": 1.0803312038551864,
+    "daylight": 15232363934.0
+  },
+  "merauke": {
+    "night_lights": 0.12829956595280165,
+    "daylight": 12101607441.591803
+  },
+  "jayawijaya": { "night_lights": 0.0, "daylight": 9476860344.058187 },
+  "jayapura": {
+    "night_lights": 2.0473855297703487,
+    "daylight": 12226787082.045715
+  },
+  "nabire": {
+    "night_lights": 0.0034779387545636107,
+    "daylight": 10742490210.335588
+  },
+  "kepulauan yapen": {
+    "night_lights": 0.7543943561630793,
+    "daylight": 11417166306.309944
+  },
+  "biak numfor": {
+    "night_lights": 0.25150445659103904,
+    "daylight": 12964861083.510616
+  },
+  "puncak jaya": {
+    "night_lights": 0.2147596298666848,
+    "daylight": 10687697485.508852
+  },
+  "paniai": {
+    "night_lights": 0.1433277581449517,
+    "daylight": 10026329742.31709
+  },
+  "mimika": {
+    "night_lights": 0.007355002708195209,
+    "daylight": 9844663360.672073
+  },
+  "sarmi": { "night_lights": 0.0, "daylight": 11559650855.879017 },
+  "keerom": {
+    "night_lights": 0.06581745650088493,
+    "daylight": 9784986950.732365
+  },
+  "pegunungan bintang": { "night_lights": 0.0, "daylight": 9185414241.204378 },
+  "yahukimo": { "night_lights": 0.0, "daylight": 9661530848.876215 },
+  "tolikara": {
+    "night_lights": 0.02054639081980385,
+    "daylight": 10176953127.3744
+  },
+  "waropen": {
+    "night_lights": 0.23600500645594755,
+    "daylight": 11198263543.348314
+  },
+  "boven digoel": {
+    "night_lights": 0.11960511688309806,
+    "daylight": 11245265174.556768
+  },
+  "mappi": {
+    "night_lights": 0.2597560695749619,
+    "daylight": 10699295524.705956
+  },
+  "asmat": {
+    "night_lights": 0.005351513360449338,
+    "daylight": 11586578667.210407
+  },
+  "supiori": {
+    "night_lights": 0.4211988961258985,
+    "daylight": 10212804303.371754
+  },
+  "mamberamo raya": {
+    "night_lights": 0.20742810998573133,
+    "daylight": 11599814784.287077
+  },
+  "mamberamo tengah": { "night_lights": 0.0, "daylight": 9701952950.912271 },
+  "yalimo": {
+    "night_lights": 0.001026337769701703,
+    "daylight": 9386720999.26665
+  },
+  "lanny jaya": { "night_lights": 0.0, "daylight": 9601098872.722134 },
+  "nduga": { "night_lights": 0.0, "daylight": 9506616577.729084 },
+  "puncak": { "night_lights": 0.0, "daylight": 10260864910.841518 },
+  "dogiyai": {
+    "night_lights": 0.13038423613756708,
+    "daylight": 9971813080.141603
+  },
+  "intan jaya": {
+    "night_lights": 0.008737355672736695,
+    "daylight": 9617214109.033424
+  },
+  "deiyai": {
+    "night_lights": 0.24661021951713769,
+    "daylight": 11069202344.100183
+  },
+  "sorong": {
+    "night_lights": 0.8372845184082507,
+    "daylight": 12538508613.918766
+  },
+  "manokwari": {
+    "night_lights": 0.32305389743912777,
+    "daylight": 11653010909.211445
+  },
+  "fakfak": {
+    "night_lights": 0.20636226526067492,
+    "daylight": 12745674131.02792
+  },
+  "sorong selatan": {
+    "night_lights": 0.21473883056535303,
+    "daylight": 12261869612.185854
+  },
+  "raja ampat": {
+    "night_lights": 0.20179343718187137,
+    "daylight": 12813897445.532877
+  },
+  "teluk bintuni": {
+    "night_lights": 0.26564275511635926,
+    "daylight": 11299520188.328459
+  },
+  "teluk wondama": {
+    "night_lights": 0.1899027900648614,
+    "daylight": 12428426378.0
+  },
+  "kaimana": {
+    "night_lights": 0.008532892013165474,
+    "daylight": 12611155945.193155
+  },
+  "tambrauw": {
+    "night_lights": 0.1626663002653429,
+    "daylight": 12526188087.285265
+  },
+  "maybrat": {
+    "night_lights": 0.20668101151581045,
+    "daylight": 11937353760.901356
+  },
+  "manokwari selatan": {
+    "night_lights": 0.2622291448021108,
+    "daylight": 11948817731.68654
+  },
+  "pegunungan arfak": {
+    "night_lights": 0.15657716962504095,
+    "daylight": 11751672978.014812
+  }
+}
