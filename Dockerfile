@@ -11,6 +11,6 @@ WORKDIR /app
 
 COPY . /app
 
-EXPOSE 6969
+EXPOSE ${PORT:-8000}
 
-CMD ["uv", "run", "gunicorn", "-b", "0.0.0.0:6969", "-k", "uvicorn.workers.UvicornWorker", "src.api:app"]
+CMD ["sh", "-c", "uv run gunicorn -b 0.0.0.0:${PORT:-8000} -k uvicorn.workers.UvicornWorker src.api:app"]
